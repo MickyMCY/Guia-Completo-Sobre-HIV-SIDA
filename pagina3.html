@@ -1,38 +1,116 @@
-
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <title>Aviso Importante</title>
-    <style>
-        body {
-            background: #000;
-            color: #fff;
-            font-family: Arial, sans-serif;
-            padding: 50px;
-        }
-        h1 {
-            color: #f00;
-            text-align: center;
-        }
-        .content {
-            max-width: 700px;
-            margin: 0 auto;
-            background: #111;
-            padding: 30px;
-            border-radius: 8px;
-        }
-        strong {
-            color: #f00;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>Aviso Importante</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      background: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      padding: 25px 15px;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .content {
+      max-width: 700px;
+      margin: 0 auto;
+      background: #111;
+      padding: 30px 25px;
+      border-radius: 8px;
+      box-sizing: border-box;
+      line-height: 1.6;
+      font-size: 1.1rem;
+    }
+    h1 {
+      color: #f00;
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 1.8rem;
+      line-height: 1.1;
+    }
+    .box {
+      background-color: rgba(255, 0, 0, 0.15);
+      border-left: 6px solid #f00;
+      padding: 20px 20px 18px 20px;
+      margin-bottom: 25px;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+    .box strong {
+      color: #f00;
+      font-weight: 700;
+    }
+    .box p {
+      font-weight: 400;
+      margin-top: 8px;
+      color: #ddd;
+    }
+    .important-phrase {
+      color: #f00;
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-top: 12px;
+    }
+    .icon {
+      font-size: 1.5rem;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+    /* Mobile ajustes */
+    @media (max-width: 480px) {
+      body {
+        padding: 15px 10px;
+      }
+      .content {
+        padding: 20px 15px;
+        font-size: 1rem;
+      }
+      h1 {
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+      }
+      .important-phrase {
+        font-size: 1.1rem;
+      }
+      .box {
+        padding: 16px 16px 14px 16px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="content">
-        <h1>⚠️ AVISO MUITO IMPORTANTE ⚠️</h1>
-        <p><strong>Não existe cura caseira garantida para o HIV/SIDA em casa.</strong> Por favor, continue tomando os seus comprimidos todos os dias, conforme orientação do seu médico. O tratamento médico é a única forma comprovada de manter você vivo, estável e saudável. Se você tiver disciplina e seguir tudo corretamente, pode viver bem e controlar o vírus.</p>
-        <p>Parabéns por chegar até aqui. A receita natural é apenas um apoio — nunca pare o tratamento médico. Confie no seu médico, faça exames regularmente e cuide de você.</p>
-        <p><strong>Obrigado por tudo!</strong></p>
+  <div class="content">
+    <h1>⚠️ AVISO MUITO IMPORTANTE ⚠️</h1>
+
+    <div class="box">
+      <span class="icon">❗</span>
+      <strong>Não existe cura caseira garantida para o HIV/SIDA.</strong>
+      <p>Até hoje, a medicina não comprovou nenhuma receita natural ou caseira que cure o HIV/SIDA. Por isso, é fundamental que você siga rigorosamente o tratamento médico indicado pelo seu profissional de saúde.</p>
     </div>
+
+    <div class="box">
+      <span class="icon">💊</span>
+      <strong>Seu tratamento é o seu maior aliado.</strong>
+      <p>Tomar os medicamentos diariamente, fazer exames regulares e manter o acompanhamento médico são as únicas formas cientificamente comprovadas para controlar o vírus, preservar sua saúde e qualidade de vida.</p>
+    </div>
+
+    <div class="box">
+      <span class="icon">⚖️</span>
+      <strong>Receitas naturais podem ajudar, mas nunca substituir.</strong>
+      <p>Apoiar-se em remédios naturais pode melhorar seu bem-estar geral, mas nunca interrompa ou substitua o tratamento médico com base nisso. Sempre consulte seu médico antes de acrescentar qualquer complemento.</p>
+    </div>
+
+    <div class="box">
+      <span class="icon">🛡️</span>
+      <strong>Disciplina e cuidado fazem a diferença.</strong>
+      <p>Com disciplina para seguir o tratamento e cuidado com seu corpo e mente, você pode viver muitos anos com qualidade, controlar a doença e manter uma vida ativa e feliz.</p>
+    </div>
+
+    <div class="box" style="text-align:center; font-size: 1.2rem; font-weight: 700; color: #f00;">
+      <span class="icon">🙏</span> Obrigado por confiar e se cuidar!
+    </div>
+  </div>
 </body>
 </html>
