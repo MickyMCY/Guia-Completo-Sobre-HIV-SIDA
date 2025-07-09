@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Confirme Seus Dados</title>
+  <style>
+    body {
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #fff;
+      margin: 0;
+    }
+    .form-container {
+      background: rgba(0, 0, 0, 0.85);
+      padding: 30px;
+      border-radius: 8px;
+      width: 320px;
+    }
+    h1 {
+      text-align: center;
+      color: #f00;
+      margin-bottom: 20px;
+    }
+    input, select {
+      width: 100%;
+      padding: 15px;
+      margin: 12px 0;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+    button {
+      width: 100%;
+      padding: 15px;
+      background: #f00;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 18px;
+      cursor: pointer;
+      animation: blink 1s infinite;
+    }
+    @keyframes blink {
+      0% { opacity: 1; }
+      50% { opacity: 0.5; }
+      100% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h1>Confirme Seus Dados</h1>
+    <form action="pagina2.html">
+      <input type="text" name="nome" placeholder="Seu Nome" required>
+      
+      <select name="idade" required>
+        <option value="">Sua Idade</option>
+        <option value="18-25">18–25 anos</option>
+        <option value="26-35">26–35 anos</option>
+        <option value="36-45">36–45 anos</option>
+        <option value="46-55">46–55 anos</option>
+        <option value="56+">56 anos ou mais</option>
+      </select>
+      
+      <select name="genero" required>
+        <option value="">Qual é o seu gênero?</option>
+        <option value="Masculino">Masculino (Homem)</option>
+        <option value="Feminino">Feminino (Mulher)</option>
+      </select>
+      
+      <select name="tempo" required>
+        <option value="">Positivo há quanto tempo?</option>
+        <option value="menos1">Menos de 1 ano</option>
+        <option value="1a2">1 a 2 anos</option>
+        <option value="3a5">3 a 5 anos</option>
+        <option value="5mais">Mais de 5 anos</option>
+      </select>
+
+      <button type="submit">PRÓXIMO PASSO</button>
+    </form>
+  </div>
+</body>
+</html>
