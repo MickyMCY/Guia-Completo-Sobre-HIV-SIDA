@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Confirme Seus Dados</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     body {
       background: url('background.jpg') no-repeat center center fixed;
@@ -14,26 +15,43 @@
       height: 100vh;
       color: #fff;
       margin: 0;
+      padding: 10px;
+      box-sizing: border-box;
     }
     .form-container {
       background: rgba(0, 0, 0, 0.85);
-      padding: 30px;
+      padding: 25px 20px;
       border-radius: 8px;
-      width: 320px;
+      width: 100%;
+      max-width: 360px; /* largura máxima para telas maiores */
+      box-sizing: border-box;
     }
     h1 {
       text-align: center;
       color: #f00;
       margin-bottom: 20px;
+      font-size: 1.6rem;
     }
     input, select {
       width: 100%;
-      padding: 15px;
+      padding: 14px 15px;
       margin: 12px 0;
       border: none;
       border-radius: 4px;
-      font-size: 16px;
+      font-size: 1rem;
       box-sizing: border-box;
+      background-color: #222;
+      color: #fff;
+      appearance: none; /* remove seta default do select para personalizar */
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2212%22%20height%3D%227%22%20viewBox%3D%220%200%2012%207%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M6%207L0%200h12L6%207z%22%20fill%3D%22%23fff%22/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 15px center;
+      background-size: 12px 7px;
+    }
+    input::placeholder, select option {
+      color: #aaa;
     }
     button {
       width: 100%;
@@ -42,14 +60,37 @@
       color: #fff;
       border: none;
       border-radius: 4px;
-      font-size: 18px;
+      font-size: 1.2rem;
       cursor: pointer;
       animation: blink 1s infinite;
+      margin-top: 10px;
+      box-sizing: border-box;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #cc0000;
     }
     @keyframes blink {
-      0% { opacity: 1; }
+      0%, 100% { opacity: 1; }
       50% { opacity: 0.5; }
-      100% { opacity: 1; }
+    }
+
+    /* Adaptar texto e tamanho para telas pequenas */
+    @media (max-width: 400px) {
+      .form-container {
+        padding: 20px 15px;
+      }
+      h1 {
+        font-size: 1.4rem;
+      }
+      input, select {
+        font-size: 0.95rem;
+        padding: 12px 14px;
+      }
+      button {
+        font-size: 1.1rem;
+        padding: 14px;
+      }
     }
   </style>
 </head>
@@ -58,24 +99,24 @@
     <h1>Confirme Seus Dados</h1>
     <form action="pagina2.html">
       <input type="text" name="nome" placeholder="Seu Nome" required>
-      
+
       <select name="idade" required>
-        <option value="">Sua Idade</option>
+        <option value="" disabled selected>Sua Idade</option>
         <option value="18-25">18–25 anos</option>
         <option value="26-35">26–35 anos</option>
         <option value="36-45">36–45 anos</option>
         <option value="46-55">46–55 anos</option>
         <option value="56+">56 anos ou mais</option>
       </select>
-      
+
       <select name="genero" required>
-        <option value="">Qual é o seu gênero?</option>
+        <option value="" disabled selected>Qual é o seu gênero?</option>
         <option value="Masculino">Masculino (Homem)</option>
         <option value="Feminino">Feminino (Mulher)</option>
       </select>
-      
+
       <select name="tempo" required>
-        <option value="">Positivo há quanto tempo?</option>
+        <option value="" disabled selected>Positivo há quanto tempo?</option>
         <option value="menos1">Menos de 1 ano</option>
         <option value="1a2">1 a 2 anos</option>
         <option value="3a5">3 a 5 anos</option>
