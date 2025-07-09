@@ -1,64 +1,137 @@
-
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <title>Receita Natural</title>
-    <style>
-        body {
-            background: #000;
-            color: #fff;
-            font-family: Arial, sans-serif;
-            padding: 30px;
-        }
-        h1 {
-            color: #f00;
-            text-align: center;
-        }
-        .content {
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        img {
-            display: block;
-            width: 100%;
-            max-width: 700px;
-            margin: 20px auto;
-        }
-        .button {
-            display: block;
-            width: 100%;
-            background: #f00;
-            color: #fff;
-            padding: 15px;
-            text-align: center;
-            font-size: 18px;
-            text-decoration: none;
-            margin-top: 30px;
-            border-radius: 4px;
-            animation: blink 1s infinite;
-        }
-        @keyframes blink {
-            0% { opacity: 1; }
-            50% { opacity: 0.5; }
-            100% { opacity: 1; }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>Receita Natural</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      background: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      padding: 20px 15px;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .content {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    h1 {
+      color: #f00;
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 1.8rem;
+      line-height: 1.2;
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-width: 700px;
+      border-radius: 8px;
+      margin: 0 auto 30px auto;
+      object-fit: cover;
+    }
+    h2 {
+      color: #f00;
+      margin-bottom: 15px;
+      font-size: 1.4rem;
+    }
+    /* Lista de ingredientes com emojis */
+    ul.ingredientes {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 30px;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    ul.ingredientes li {
+      margin-bottom: 12px;
+    }
+    ul.ingredientes li span.emoji {
+      font-size: 1.5rem;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+    /* Passos */
+    ol.passos {
+      padding-left: 20px;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+    ol.passos li {
+      margin-bottom: 20px;
+    }
+    /* Botão */
+    .button {
+      display: block;
+      width: 100%;
+      background: #f00;
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+      font-size: 1.3rem;
+      text-decoration: none;
+      border-radius: 6px;
+      animation: blink 1.2s infinite;
+      box-sizing: border-box;
+      user-select: none;
+    }
+    .button:hover {
+      background: #cc0000;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.6; }
+    }
+
+    /* Mobile ajustes */
+    @media (max-width: 480px) {
+      body {
+        padding: 15px 10px;
+      }
+      h1 {
+        font-size: 1.5rem;
+      }
+      h2 {
+        font-size: 1.2rem;
+      }
+      ul.ingredientes, ol.passos {
+        font-size: 1rem;
+      }
+      .button {
+        font-size: 1.1rem;
+        padding: 14px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="content">
-        <h1>Solução Natural Para Apoiar o Controle do HIV/SIDA</h1>
-        <img src="receita.jpg" alt="Imagem da Receita">
-        <h2>Receita:</h2>
-        <p>2 limões médios<br>
-        1 pedaço de gengibre (5cm)<br>
-        1 colher de mel puro<br>
-        500ml de água morna</p>
+  <div class="content">
+    <h1>Solução Natural Para Apoiar o Controle do HIV/SIDA</h1>
+    <img src="receita.jpg" alt="Imagem da Receita Natural">
 
-        <h2>Como preparar:</h2>
-        <p>Esprema os limões, rale o gengibre, misture tudo na água morna e adoce com o mel. Tome em jejum, pela manhã. Repita por 7 dias, sempre fresco.</p>
+    <h2>Ingredientes:</h2>
+    <ul class="ingredientes">
+      <li><span class="emoji">🍋</span> 2 limões médios, frescos e suculentos</li>
+      <li><span class="emoji">🫚</span> 1 pedaço de gengibre (cerca de 5cm), limpo e fresco</li>
+      <li><span class="emoji">🍯</span> 1 colher de mel puro, preferencialmente natural</li>
+      <li><span class="emoji">💧</span> 500ml de água morna (não quente demais, cerca de 40–45°C)</li>
+    </ul>
 
-        <a href="pagina3.html" class="button">CURAR TOTAL DO HIV/SIDA</a>
-    </div>
+    <h2>Modo de preparo passo a passo:</h2>
+    <ol class="passos">
+      <li><strong>Esprema os limões:</strong> Corte os limões ao meio e esprema o suco, retirando as sementes para não amargar.</li>
+      <li><strong>Rale o gengibre:</strong> Use um ralador fino para extrair o gengibre, aproximadamente 1 colher de chá rasa, para liberar aroma e propriedades.</li>
+      <li><strong>Prepare a água morna:</strong> Aqueça a água até ficar morninha, entre 40 a 45 graus Celsius — água muito quente pode perder algumas propriedades do mel e do gengibre.</li>
+      <li><strong>Misture tudo:</strong> Em uma caneca ou chavina, junte o suco do limão, o gengibre ralado e a colher de mel. Mexa bem até o mel dissolver completamente.</li>
+      <li><strong>Consuma com calma:</strong> Tome esta bebida preferencialmente em jejum, pela manhã. Pode tomar uma ou duas chavinas por dia, dependendo de como você se sente.</li>
+      <li><strong>Repetir:</strong> Para melhores resultados, faça essa preparação todos os dias, preferencialmente durante 7 dias seguidos, sempre preparando a bebida fresca.</li>
+    </ol>
+
+    <a href="pagina3.html" class="button">CURAR TOTAL DO HIV/SIDA</a>
+  </div>
 </body>
 </html>
